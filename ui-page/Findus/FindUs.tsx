@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import SubHeading from '../../components/Landing/SubHeading/SubHeading';
+import SubHeading from '../../components/Landing/Footer/SubHeading';
 import { findus } from '../../constants/images';
 
 const FindUs = () => (

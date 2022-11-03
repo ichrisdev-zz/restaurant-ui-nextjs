@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import SubHeading from '../../components/Landing/SubHeading/SubHeading';
+import SubHeading from '../../components/Landing/Footer/SubHeading';
 import { laurels } from '../../constants/images';
 import data from '../../constants/data';
 // import './Laurels.scss';

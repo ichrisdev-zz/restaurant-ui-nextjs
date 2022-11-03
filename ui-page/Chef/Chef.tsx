@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import SubHeading from '../../components/Landing/SubHeading/SubHeading';
+import SubHeading from '../../components/Landing/Footer/SubHeading';
 import { chef, quote, sign } from '../../constants/images';
 // import './Chef.scss';
 

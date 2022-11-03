@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from 'react-icons/bs';
 
-import SubHeading from '../../components/Landing/SubHeading/SubHeading';
+import SubHeading from '../../components/Landing/Footer/SubHeading';
 import { gallery01, gallery02, gallery03, gallery04 } from '../../constants/images';
 // import './Gallery.scss';
 

@@ -1,4 +1,4 @@
-import SubHeading from '../../components/Landing/SubHeading/SubHeading';
+import SubHeading from '../../components/Landing/Footer/SubHeading';
 import MenuItem from '../../components/Landing/Menuitem/MenuItem';
 import { menu } from '../../constants/images';
 import data from '../../constants/data';
