@@ -1,13 +1,11 @@
 import Image from 'next/image';
-import { title } from 'process';
-import React from 'react';
 
-import images from '../../../constants/images';
+import { spoon } from '../../../constants/images';
 
-const SubHeading = () => (
+const SubHeading = ({ title }: any) => (
   <div style={{ marginBottom: '1rem' }}>
-    <p className='p__cormorant'>Los buenos ingredientes son</p>
-    <Image src={images.spoon} alt="spoon" className='spoon__img' />
+    <p className="p__cormorant">{title}</p>
+    <Image src={spoon} alt="spoon_image" className="spoon__img" />
   </div>
 );
 

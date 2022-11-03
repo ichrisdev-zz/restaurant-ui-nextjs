@@ -1,4 +1,4 @@
-import images from './images';
+import { award01, award02, award03, award05 } from './images';
 
 const wines = [
   {
@@ -69,25 +69,25 @@ const cocktails = [
 const awards = [
   {
     id: 1,
-    imgUrl: images.award02,
+    imgUrl: award02,
     title: 'Bib Gourmond',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
   },
   {
     id: 2,
-    imgUrl: images.award01,
+    imgUrl: award01,
     title: 'Rising Star',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
   },
   {
     id: 3,
-    imgUrl: images.award05,
+    imgUrl: award05,
     title: 'AA Hospitality',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
   },
   {
     id: 4,
-    imgUrl: images.award03,
+    imgUrl: award03,
     title: 'Outstanding Chef',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
   },

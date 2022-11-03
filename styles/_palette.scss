@@ -10,6 +10,13 @@ $white-0: #FFFFFF;
 $white-1: #F2F2F2;
 $white-2: #E6E6E6;
 $white-3: #CCCCCC;
+$golden: #DCCA87;
+$black: #0C0C0C;
+$gray: #545454;
+$crimson: #F5EFDB;
+$grey: #AAAAAA;
+$white: #FFFFFF;
+
 
 :export {
     seaColor-0: $sea-0;
@@ -24,4 +31,11 @@ $white-3: #CCCCCC;
     whiteColor-1: $white-1;
     whiteColor-2: $white-2;
     whiteColor-3: $white-3;
+    goldenColor: $golden;
+    blackColor: $black;
+    grayColor: $gray;
+    crimsonColor: $crimson;
+    greyColor: $grey;
+    whiteColor: $white;
+
 }
