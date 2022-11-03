@@ -1,26 +1,25 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Navbar from "../components/Landing/Navbar/Navbar";
+import AboutUs from "../ui-page/AboutUs";
+import Header from "../ui-page/Header/Header";
+import SpecialMenu from '../ui-page/Menu/SpecialMenu';
+import Chef from '../ui-page/Chef/Chef';
+import Intro from '../ui-page/Intro/Intro';
+import Laurels from '../ui-page/Laurels/Laurels';
+import Gallery from '../ui-page/Gallery/Gallery';
+import FindUs from '../ui-page/Findus/FindUs';
+import Footer from '../ui-page/Footer';
 
-import '../styles/modules/Home.module.scss'
-import NavbarLanding from '../components/Landing/nav-landing/NavbarLanding'
-import Header from '../components/Landing/header/Header'
-import AboutUs from '../components/Landing/about-us/AboutUs'
-import SpecialMenu from '../components/Landing/special-menu/SpecialMenu'
-import Laurels from '../components/Landing/laurels/Laurels'
-import Gallery from '../components/Landing/gallery/Gallery'
-import FindUs from '../components/Landing/find-us/FindUs'
-import Footer from '../components/Landing/footer/Footer'
 
 export default function Home() {
   return (
     <div >
       <main>
-        <h1>Ir a los repositorios</h1>
-        <Link href="/repository" >Navegar </Link>
-        <NavbarLanding />
+        <Navbar />
         <Header />
         <AboutUs />
         <SpecialMenu />
+        <Chef />
+        <Intro />
         <Laurels />
         <Gallery />
         <FindUs />
