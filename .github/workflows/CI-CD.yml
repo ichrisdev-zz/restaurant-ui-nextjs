@@ -25,6 +25,5 @@ jobs:
       - run: yarn global add pm2
       - run: yarn
       - run: yarn build
+      # - run: pm2 start yarn --name "nextjs" --interpreter bash -- start
       - run: pm2 restart nextjs
-      - run: pm2 start yarn --name "nextjs" --interpreter bash -- start
-      - run: pm2 show nextjs
