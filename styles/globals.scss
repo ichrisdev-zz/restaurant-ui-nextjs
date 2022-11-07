@@ -2,9 +2,13 @@
 @import './variables';
 @import './typhography';
 @import "~rfs/scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 $font-base: 'Cormorant Upright', serif;
 $font-alt: 'Open Sans', sans-serif;
+
 
 $sea-0: #B1D0E0;
 $sea-1: #6998AB;
@@ -65,6 +69,17 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+//login form
+
+.login__form {
+  //center to the screen
+  position: absolute;
+  @include margin-left(4rem);
+  @include margin-right(4rem);
+  //background
+
+}
+
 // footer
 
 .app__footerOverlay {
@@ -109,7 +124,7 @@ body {
   width: 620px;
   border: 1px solid $golden;
   border-radius: 5px;
-  font-size: 1rem;
+  @include font-size(1rem);
   font-family: $font-base;
   color: $white;
 

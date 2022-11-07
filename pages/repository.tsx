@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Table } from '../components/Table/Table';
 import { fetchRepoData } from '../store/slices/repositorySlice';
 import { AppState, wrapper } from '../store/store';
 export const Repository = () => {
@@ -6,11 +7,15 @@ export const Repository = () => {
     return (
         <div>
             <h1>repository list</h1>
-            {repositories.map((repo: any) => (
+
+            <Table />
+            {/* {repositories.map((repo: any) => (
                 <div key={repo.id}>
                     <h2>{repo.name}</h2>
                 </div>
-            ))}
+            ))} */}
+
+
         </div>
     )
 

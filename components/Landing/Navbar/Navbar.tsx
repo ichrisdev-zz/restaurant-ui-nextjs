@@ -20,7 +20,8 @@ const Navbar = () => {
         <li className="p__opensans"><a href="#contact">Contact</a></li>
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">Log In / Registration</a>
+
+        <Link href="/auth/signIn" className="p__opensans">Log In / Registration</Link>
         <div />
         <Link href="/" className="p__opensans">Book Table</Link>
       </div>
