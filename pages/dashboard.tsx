@@ -16,12 +16,15 @@ export const Dashboard = ({ data }: any, { decoded }: any) => {
     return (
         <DashboardLayout>
             <h1>Dashboard</h1>
+
+            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={handleLogout}>salir</button>
+            <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' onClick={() => router.push("/crud/action")}>Ir a las actions</button>
+
+
             <h2> {userName ? userName : 'user not found'}</h2>
             <h2> {email ? email : 'user not found'}</h2>
             <h2> {phoneNumber ? phoneNumber : 'user not found'}</h2>
             <h2> {fk_Rol ? fk_Rol : 'user not found'}</h2>
-            <button onClick={handleLogout}>salir</button>
-            <button onClick={() => router.push("/crud/action")}>Ir a las actions</button>
 
 
             {/* <h2> {phoneNumber ? phoneNumber : 'phoneNumber not found'}</h2>
