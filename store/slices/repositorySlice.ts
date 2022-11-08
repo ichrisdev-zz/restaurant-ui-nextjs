@@ -5,6 +5,7 @@ import { AppThunk } from '../store';
 export const RepositorySlice = createSlice({
     name: "repository",
     initialState: {
+        // todo: hacer esto mismo con el usuario
         repositories: [],
     },
     reducers: {

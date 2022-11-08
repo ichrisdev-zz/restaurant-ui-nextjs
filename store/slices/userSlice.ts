@@ -7,7 +7,7 @@ export const userSlice = createSlice({
         userName: '',
         phoneNumber: '',
         password: '',
-        fk_Rol: '2',
+        fk_Rol: '',
 
     },
     reducers: {
@@ -16,10 +16,20 @@ export const userSlice = createSlice({
             state.userName = action.payload.userName;
             state.phoneNumber = action.payload.phoneNumber;
             state.password = action.payload.password;
+            state.fk_Rol = action.payload.fk_Rol;
         }
-    }
+
+
+
+
+
+    },
+
+
+
 
 })
+
 
 export const { setUser } = userSlice.actions;
 

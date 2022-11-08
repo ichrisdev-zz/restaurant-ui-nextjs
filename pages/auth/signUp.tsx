@@ -6,10 +6,12 @@ import Image from 'next/image';
 import RestorantImage from '../../assets/restorant-bg.jpg'
 
 export const SignUp = () => {
-    const url = 'http://localhost:4000/auth/login';
+    const url = 'http://localhost:4000/auth/register';
     const [credentials, setCredentials] = useState({
         email: "",
         password: "",
+        userName: "",
+        phoneNumber: "",
     });
     const router = useRouter();
     const handleSubmit = async (e: any) => {
@@ -19,10 +21,7 @@ export const SignUp = () => {
         console.log(res);
 
         if (res.status === 200) {
-            return router.push("/repository");
-        }
-        if (res.status === 400) {
-            console.log(res.data.message)
+            return router.push("/auth/signIn");
         }
 
     };
@@ -106,38 +105,50 @@ export const SignUp = () => {
                             </p>
                         </div>
 
-                        <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                        <form onSubmit={handleSubmit} className="mt-8 grid grid-cols-6 gap-6">
+                            <div className="col-span-6 sm:col-span-3">
+                                <label
+                                    htmlFor="FirstName"
+                                    className="block text-sm font-medium text-gray-700"
+
+                                >
+                                    Username
+                                </label>
+
+                                <input
+                                    type="text"
+                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    placeholder='set username'
+                                    onChange={(e) =>
+                                        setCredentials({
+                                            ...credentials,
+                                            userName: e.target.value,
+                                        })
+                                    }
+                                />
+                            </div>
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                     htmlFor="FirstName"
                                     className="block text-sm font-medium text-gray-700"
                                 >
-                                    First Name
+                                    Phonenumber
                                 </label>
 
                                 <input
                                     type="text"
-                                    id="FirstName"
-                                    name="first_name"
                                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    placeholder='set phonenumber'
+                                    onChange={(e) =>
+                                        setCredentials({
+                                            ...credentials,
+                                            phoneNumber: e.target.value,
+                                        })
+                                    }
                                 />
                             </div>
 
-                            <div className="col-span-6 sm:col-span-3">
-                                <label
-                                    htmlFor="LastName"
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Last Name
-                                </label>
 
-                                <input
-                                    type="text"
-                                    id="LastName"
-                                    name="last_name"
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
 
                             <div className="col-span-6">
                                 <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
@@ -146,9 +157,14 @@ export const SignUp = () => {
 
                                 <input
                                     type="email"
-                                    id="Email"
-                                    name="email"
+                                    placeholder='set email'
                                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    onChange={(e) =>
+                                        setCredentials({
+                                            ...credentials,
+                                            email: e.target.value,
+                                        })
+                                    }
                                 />
                             </div>
 
@@ -162,9 +178,14 @@ export const SignUp = () => {
 
                                 <input
                                     type="password"
-                                    id="Password"
-                                    name="password"
                                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    placeholder='set password'
+                                    onChange={(e) =>
+                                        setCredentials({
+                                            ...credentials,
+                                            password: e.target.value,
+                                        })
+                                    }
                                 />
                             </div>
 
@@ -172,11 +193,13 @@ export const SignUp = () => {
                                 <label
                                     htmlFor="PasswordConfirmation"
                                     className="block text-sm font-medium text-gray-700"
+
                                 >
-                                    Password Confirmation
+                                    Password Confirmation (disabled)
                                 </label>
 
                                 <input
+                                    disabled={true}
                                     type="password"
                                     id="PasswordConfirmation"
                                     name="password_confirmation"
