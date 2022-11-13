@@ -2,7 +2,7 @@ import { GridRenderCellParams } from '@mui/x-data-grid';
 import { Table } from '../../components/Table/Table';
 import { DeleteButton } from '../../components/DeleteButton/DeleteButton';
 
-export const Action = ({ filtered }: any) => {
+export const Action = ({ data, info }: any) => {
     const columns = [
         {
             field: 'idAction',
@@ -59,7 +59,7 @@ export const Action = ({ filtered }: any) => {
     return (
         <div className='container '>
             <DeleteButton />
-            <Table columns={columns} data={filtered} />
+            <Table columns={columns} data={data} />
         </div>
 
 
@@ -82,11 +82,12 @@ export async function getServerSideProps({ req }: any) {
         }
     })
 
-    const data: any = await res.json();
-    const filtered = data.results.data
+    const resData: any = await res.json();
+    const data = resData.results.data
+    const info = resData.results
 
     return {
-        props: { filtered }, // will be passed to the page component as props
+        props: { data, info }, // will be passed to the page component as props
     }
 }
 
