@@ -16,7 +16,6 @@ export const SignIn = () => {
 
         e.preventDefault();
         const res = await axios.post(url, credentials);
-        console.log(res);
 
         if (res.status === 200) {
             document.cookie = `tokenUser=${res.data.tokenUser}; path=/;`;
@@ -24,8 +23,12 @@ export const SignIn = () => {
             router.push("/dashboard");
         }
 
+        return res
+
 
     };
+
+    console.log(handleSubmit)
 
 
 
@@ -141,5 +144,6 @@ export const SignIn = () => {
     )
 
 }
+
 
 export default SignIn
